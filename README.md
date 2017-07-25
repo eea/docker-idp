@@ -1,5 +1,5 @@
 IDP Service
 ===========
 
-Docker image based on https://github.com/Unicon/shibboleth-idp-dockerized
+Docker image based on tomcat 6
 

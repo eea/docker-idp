@@ -1,5 +1,8 @@
-FROM unicon/shibboleth-idp:3.3.1
+FROM tomcat:6
 
-MAINTAINER <soren.roug@eea.europa.eu>
+VOLUME /opt/shibboleth-idp
+COPY endorsed /usr/local/tomcat/endorsed
+COPY idp.xml /usr/local/tomcat/conf/Catalina/localhost/idp.xml
+#RUN rm -rf /usr/local/tomcat/webapps/docs  /usr/local/tomcat/webapps/examples  \
+#           /usr/local/tomcat/webapps/host-manager  /usr/local/tomcat/webapps/manager
 
-ADD shibboleth-idp/ /opt/shibboleth-idp/

@@ -1,14 +1,11 @@
 
 # Configuration:
-# Hostname: idpnt.eea.europa.eu
 web:
   image: eeacms/shibboleth-idp:latest
   ports:
-  - 443:4443
-  - 8443:8443
+  - 8080:8080
   volumes:
-  - shibboleth-idp-credentials:/opt/shibboleth-idp/credentials:ro
-  - shibboleth-idp-ext-conf:/opt/shibboleth-idp/ext-conf:ro
+  - shibboleth-idp:/opt/shibboleth-idp
   labels:
     io.rancher.scheduler.affinity:host_label: hostname=prodI-cph-02
 
